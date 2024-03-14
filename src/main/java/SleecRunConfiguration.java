@@ -10,7 +10,7 @@ import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class SleecRunConfiguration extends RunConfigurationBase {
+public class SleecRunConfiguration extends RunConfigurationBase{
     protected SleecRunConfiguration(Project project, ConfigurationFactory factory, String name) {
         super(project, factory, name);
     }
