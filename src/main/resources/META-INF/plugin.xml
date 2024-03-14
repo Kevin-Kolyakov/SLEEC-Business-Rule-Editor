@@ -1,0 +1,51 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.example.SLEEC_Business_Rule_Editor</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>SLEEC_Business_Rule_Editor</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="kevinkolyakov@gmail.com" url="TBD">University of Toronto</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    <h2>Enhanced Business Rules Plugin for PyCharm & IntelliJ IDEA</h2>
+<p>
+  <strong>Streamline your legal and business workflows</strong> within your favorite IDE with the <em>Enhanced Business Rules Plugin</em> for PyCharm and IntelliJ IDEA. This powerful plugin <strong>transforms your development environment</strong> into a sophisticated hub for editing, validating, and executing business rules written in Python.
+</p>
+<p>
+  Experience <strong>ease of use</strong> with intuitive <span style="background-color: #FFFF00;">keyword highlighting</span>, smart <span style="color: #FF0000;">syntax error alerts</span>, and seamless rule execution output presentation. With a focus on non-technical users like legal professionals and legislators, the plugin boasts a <strong>user-friendly interface</strong>, <strong>comprehensive documentation</strong>, and robust feedback mechanisms.
+</p>
+<p>
+  Save valuable time and minimize errors, ensuring your rules are robust and effective. <strong>Elevate your productivity</strong> with the Enhanced Business Rules Plugin – where simplicity meets power.
+</p>
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform
+
+
+    </depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <fileTypeFactory implementation="SleecFileTypeFactory"/>
+    </extensions>
+    <applicationListeners>
+        <listener class="MyDocumentListener" topic="com.intellij.openapi.fileEditor.FileDocumentManagerListener"/>
+    </applicationListeners>
+    <extensions defaultExtensionNs="com.intellij">
+        <configurationType implementation="SleecConfigurationType"/>
+    </extensions>
+
+</idea-plugin>
